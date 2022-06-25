@@ -1,0 +1,87 @@
+{
+  "name": "webpack-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "sideEffects": false,
+  "scripts": {
+    "dev": "node ./webpack/scripts/dev",
+    "build": "node ./webpack/scripts/build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinquanpan/webpack-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jinquanpan/webpack-react/issues"
+  },
+  "homepage": "https://github.com/jinquanpan/webpack-react#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.7",
+    "@babel/preset-env": "^7.16.11",
+    "@sentry/react": "^6.18.2",
+    "@sentry/tracing": "^6.18.2",
+    "@sentry/webpack-plugin": "^1.18.9",
+    "@webpack-cli/serve": "^1.6.1",
+    "autoprefixer": "^9.7.1",
+    "babel-loader": "^8.2.3",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "core-js": "^3.4.1",
+    "css-loader": "^3.2.0",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "ejs-loader": "^0.5.0",
+    "eslint": "^6.6.0",
+    "eslint-loader": "^3.0.2",
+    "file-loader": "^6.2.0",
+    "fs": "^0.0.1-security",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^4.5.2",
+    "iofs": "^1.5.2",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.8.2",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-normalize": "^8.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "globals": {
+      "$": "readonly",
+      "Promise": "readonly"
+    },
+    "rules": {
+      "no-console": 0,
+      "eqeqeq": 2,
+      "no-alert": 2
+    },
+    "extends": "eslint:recommended"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.17.12",
+    "node": "^14.4.0",
+    "node-bin-setup": "^1.1.0"
+  }
+}
