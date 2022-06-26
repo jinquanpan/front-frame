@@ -1,14 +1,21 @@
 const path = require('path')
 const cwd = process.cwd()
 
-const basePath = {
-  prod:'//114.132.223.168:3355/',
-  dev:path.resolve(cwd,'build')
+const url = {
+  dev:3666,
+  prod:3667
+}
+
+const basePath = (env) => {
+  return {
+    prod:`//114.132.223.168:${url[env.MODE]}/`,
+    dev:path.resolve(cwd,'build')
+  }
 }
 
 module.exports = function (env,branch) {
   console.log(111,env)
-  let projectPath = env.MODE === 'prod' ? basePath.prod : basePath.dev;
+  let projectPath = env.MODE === 'prod' ? basePath(env).prod : basePath(env).dev;
   let projectConfig = require(path.resolve(cwd ,'project' ,branch ,'config'));
   const branchConfig = require(path.resolve(cwd ,'project' ,branch ,'package.json'))
 
